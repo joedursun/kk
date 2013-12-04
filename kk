@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+require 'sys/proctable'
+
+app = ARGV[0]
+signal = (ARGV[1] || 9).to_i
+
+processes = Sys::ProcTable.ps.select {|pd| pd.comm =~ /#{app}/i}
+
+processes.each do |ps|
+  if signal > 0
+    `kill -#{signal} #{ps.pid}`
+  else
+    puts "Pretending to kill -#{signal} #{ps.comm} with pid #{ps.pid}"
+  end
+end
