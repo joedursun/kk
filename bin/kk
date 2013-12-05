@@ -10,6 +10,6 @@ processes.each do |ps|
   if signal > 0
     `kill -#{signal} #{ps.pid}`
   else
-    puts "Pretending to kill -#{signal} #{ps.comm} with pid #{ps.pid}"
+    puts "Pretending to terminate #{ps.comm} with pid #{ps.pid}"
   end
 end

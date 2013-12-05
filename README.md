@@ -16,7 +16,7 @@ The sys-proctable gem supports Linux, BSD, OS X, Windows, Solaris, and HP-UX; ho
 Setup:
 ------
 Add kk to your path. On POSIX-compliant systems:
-```ln -s /path/to/kk /usr/local/bin```
+```ln -s /path/to/bin/kk /usr/local/bin```
 
 Usage:
 ------
