@@ -2,7 +2,7 @@ KK is a convenience script to quickly kill any stubborn processes.
 
 Disclaimer:
 ----------
-There is plenty of room for improvement. This script will kill off any process that match the given argument. For a test run provide a signal of 0: ```kk skype 0```. This will list all processes that match 'skype' but will not perform any actions.
+There is plenty of room for improvement. This script will kill off any processes that match the given argument. For a test run provide a signal of 0: ```kk skype 0```. This will list all processes that match 'skype' but will not perform any actions.
 
 Requirements:
 ------------
