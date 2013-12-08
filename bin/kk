@@ -6,10 +6,8 @@ signal = (ARGV[1] || 9).to_i
 
 processes = Sys::ProcTable.ps.select {|pd| pd.comm =~ /#{app}/i}
 
-processes.each do |ps|
-  if signal > 0
-    `kill -#{signal} #{ps.pid}`
-  else
-    puts "Pretending to terminate #{ps.comm} with pid #{ps.pid}"
-  end
+if signal > 0
+  processes.each {|ps| `kill -#{signal} #{ps.pid}` }
+else
+  processes.each {|ps| puts "Pretending to terminate #{ps.comm} with pid #{ps.pid}" }
 end
